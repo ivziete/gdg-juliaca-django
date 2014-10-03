@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Estado Actividades</title>
+</head>
+<body>
+    <h1>Reporte de Tareas para Eventos</h1>
+    {% for resumen in lista_resumen %}
+    <h2>{{resumen.evento.nombre}}</h2>
+    <ul>
+        <li>Numero de Tareas: {{resumen.tareas_cantidad}}</li>
+
+        <li>Cantidad Completada: {{resumen.tareas_completas}} ({{resumen.porcentaje_completado}}%)</li>
+    </ul>
+    {% endfor %}
+</body>
+</html>
